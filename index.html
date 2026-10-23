@@ -31,27 +31,23 @@
 </head>
 <body>
 
-  <iframe 
-    id="app-frame"
-    src="https://script.google.com/macros/s/AKfycbw9V9MPEDbqMY-HcAMIsTWB9ozPORsTiGbPhxJToXYrWd7WkCq4tw8Z30hFZFaGoyqW2Q/exec" 
-    allow="payment">
-  </iframe>
-
   <script>
     (function() {
       var outerRef = document.referrer;
       
-      // If document.referrer is empty, check URL params or fallback to current origin
       if (!outerRef || outerRef === "") {
         var urlParams = new URLSearchParams(window.location.search);
         outerRef = urlParams.get('utm_source') || urlParams.get('ref') || "Direct";
       }
 
-      var frame = document.getElementById("app-frame");
-      if (frame) {
-        var baseUrl = "https://script.google.com/macros/s/AKfycbw9V9MPEDbqMY-HcAMIsTWB9ozPORsTiGbPhxJToXYrWd7WkCq4tw8Z30hFZFaGoyqW2Q/exec";
-        frame.src = baseUrl + "?ref=" + encodeURIComponent(outerRef);
-      }
+      var baseUrl = "https://script.google.com/macros/s/AKfycbw9V9MPEDbqMY-HcAMIsTWB9ozPORsTiGbPhxJToXYrWd7WkCq4tw8Z30hFZFaGoyqW2Q/exec";
+      var finalUrl = baseUrl + "?ref=" + encodeURIComponent(outerRef);
+
+      var iframe = document.createElement("iframe");
+      iframe.id = "app-frame";
+      iframe.setAttribute("allow", "payment");
+      iframe.src = finalUrl;
+      document.body.appendChild(iframe);
     })();
   </script>
 
