@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer-when-downgrade">
   <title>VyroTimes - Dashboard</title>
   
   <!-- Custom Logo Favicon -->
@@ -38,7 +39,14 @@
 
   <script>
     (function() {
-      var outerRef = document.referrer || "Direct";
+      var outerRef = document.referrer;
+      
+      // If document.referrer is empty, check URL params or fallback to current origin
+      if (!outerRef || outerRef === "") {
+        var urlParams = new URLSearchParams(window.location.search);
+        outerRef = urlParams.get('utm_source') || urlParams.get('ref') || "Direct";
+      }
+
       var frame = document.getElementById("app-frame");
       if (frame) {
         var baseUrl = "https://script.google.com/macros/s/AKfycbw9V9MPEDbqMY-HcAMIsTWB9ozPORsTiGbPhxJToXYrWd7WkCq4tw8Z30hFZFaGoyqW2Q/exec";
