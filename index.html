@@ -49,6 +49,7 @@
       height: 100%;
       border: none;
       display: block;
+      background-color: #f8fafc;
       opacity: 0;
       transition: opacity 0.25s ease-in-out;
     }
@@ -78,6 +79,7 @@
       var iframe = document.createElement("iframe");
       iframe.id = "app-frame";
       iframe.setAttribute("allow", "payment");
+      iframe.style.backgroundColor = "#f8fafc";
       iframe.src = finalUrl;
 
       iframe.onload = function() {
