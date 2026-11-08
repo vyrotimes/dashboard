@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Main Homepage Wrapper -->
+  <url>
+    <loc>https://vyrotimes.com/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- YouTube Services -->
+  <url>
+    <loc>https://vyrotimes.com/youtube-views/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vyrotimes.com/youtube-subscribers/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vyrotimes.com/youtube-likes/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vyrotimes.com/youtube-watch-time/</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Instagram Services -->
+  <url>
+    <loc>https://vyrotimes.com/instagram-followers/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vyrotimes.com/instagram-likes/</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- TikTok Services -->
+  <url>
+    <loc>https://vyrotimes.com/tiktok-followers/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vyrotimes.com/tiktok-likes/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vyrotimes.com/tiktok-views/</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Trust Pages -->
+  <url>
+    <loc>https://vyrotimes.com/about/</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://vyrotimes.com/contact/</loc>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://vyrotimes.com/terms/</loc>
+    <priority>0.60</priority>
+  </url>
+
+</urlset>
